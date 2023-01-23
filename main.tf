@@ -12,12 +12,12 @@ variable "gcp_project" {
 
 variable "gcp_region" {
   description = "GCP region, e.g. us-east1"
-  default     = "us-east1"
+  default     = "eu-west-1"
 }
 
 variable "gcp_zone" {
   description = "GCP zone, e.g. us-east1-a"
-  default     = "us-east1-b"
+  default     = "eu-west1-b"
 }
 
 variable "machine_type" {
@@ -27,7 +27,7 @@ variable "machine_type" {
 
 variable "instance_name" {
   description = "GCP instance name"
-  default     = "demo"
+  default     = "GCP sentinel Demo"
 }
 
 variable "image" {
@@ -48,7 +48,7 @@ resource "google_compute_instance" "demo" {
   labels = {
     name   = "demo"
     ttl   = "8h"
-    owner = "akentosh"
+    owner = "Harsha Evuri"
   }
 
   boot_disk {
